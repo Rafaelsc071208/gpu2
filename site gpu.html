@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site sobre GPUs</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+nav {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+nav h2 {
+    margin: 0 0 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    flex-grow: 1;
+    background: #555;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    flex-grow: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gpu {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.gpu:hover {
+    transform: scale(1.05);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+p{
+   font-size: large; 
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conheça as GPUs</h1>
+        <p class="text">
+            Uma placa de vídeo, também conhecida como placa gráfica ou GPU (Graphics Processing Unit), é um componente de hardware responsável por processar e renderizar imagens, vídeos e animações em um computador.
+             Ela desempenha um papel crucial em tarefas que exigem alto desempenho gráfico, como jogos, edição de vídeo e modelagem 3D. </p>
+             <br>
+             <p>
+                As placas de vídeo são essenciais para aplicações que exigem alto desempenho gráfico, como jogos, design gráfico, modelagem 3D e edição de vídeo. 
+                Elas podem ter suas próprias memórias (VRAM) e são projetadas para realizar cálculos paralelos,
+                 tornando-as mais eficientes em tarefas relacionadas a gráficos do que as CPUs tradicionais.
+             </p>
+             <h2>Anos 1970</h2>
+             <p>Primeiros Gráficos: Nos primórdios da computação, os gráficos eram gerados pela CPU e eram bastante simples.
+                 A primeira placa gráfica, a "BASIC Graphics Board", foi criada em 1977.</p>
+                 <h2>Anos 1980</h2>
+                 <p>Placas de Vídeo: O desenvolvimento das placas de vídeo começou a ganhar força.
+                     A IBM lançou a CGA (Color Graphics Adapter) em 1981, permitindo gráficos em cores e resoluções melhores.</p>
+                     <h2>Anos 1990</h2>
+                     <p>3D Graphics: A introdução de placas como a Voodoo da 3dfx (1996) marcou a era dos gráficos 3D acelerados.
+                         Isso permitiu jogos mais complexos e visuais impressionantes.
+                    </p>
+                    <h2>Anos 2000</h2>
+                    <p>GPU e DirectX: O termo "GPU" (Unidade de Processamento Gráfico) se popularizou. A NVIDIA lançou a GeForce 256 em 1999, considerada a primeira GPU verdadeira.
+                         O DirectX da Microsoft começou a ser amplamente utilizado para jogos, impulsionando a demanda por gráficos de alta qualidade.</p>
+                         <h2>Anos 2010</h2>
+                         <p>Avanços em Ray Tracing: A tecnologia de ray tracing começou a ser implementada, permitindo gráficos mais realistas. 
+                            A NVIDIA lançou a série RTX, que trouxe o ray tracing em tempo real.</p>
+                            <h2>Anos 2020</h2>
+                            <p>Inteligência Artificial: A IA começou a ser incorporada nas placas de vídeo para melhorar o desempenho em jogos e em aplicativos de aprendizado de máquina.
+                                 As placas se tornaram essenciais para tarefas além dos jogos, como mineração de criptomoedas e modelagem 3D.</p>
+                                 <h2>Futuro</h2>
+                                 <p>O futuro das placas de vídeo promete mais inovações, com foco em eficiência energética, 
+                                    melhor desempenho em inteligência artificial e integração em novas tecnologias, como realidade aumentada e virtual.</p>
+    </header>
+    <main>
+        <section id="gpu1" class="gpu">
+            <img src="imgpu1.jpg" alt="GPU 1">
+            <h2>NVIDIA GeForce RTX 4090</h2>
+            <button onclick="toggleDescription('gpu1Desc')">Ver Descrição</button>
+            <p class="description" id="gpu1Desc" style="display:none;">Esta é a GeForce RTX 4090, excelente para jogos de última geração e edição de vídeo.</p>
+        </section>
+        <section id="gpu2" class="gpu">
+            <img src="imgpu2.jpg" alt="GPU 2">
+            <h2>NVIDIA GeForce GTX 1070</h2>
+            <button onclick="toggleDescription('gpu2Desc')">Ver Descrição</button>
+            <p class="description" id="gpu2Desc" style="display:none;">Esta é a GeForce GTX 1070, ideal para mineração e desempenho em tarefas gráficas.</p>
+        </section>
+        <section id="gpu3" class="gpu">
+            <img src="imgpu3.jpg" alt="GPU 3">
+            <h2>AMD Radeon RX 6700 XT</h2>
+            <button onclick="toggleDescription('gpu3Desc')">Ver Descrição</button>
+            <p class="description" id="gpu3Desc" style="display:none;">Esta é a AMD Radeon RX 6700 XT, perfeita para criação de conteúdo e renderização 3D.</p>
+        </section>
+    </main>
+    <script>
+        function toggleDescription(descId) {
+    const description = document.getElementById(descId);
+    if (description.style.display === "none") {
+        description.style.display = "block";
+    } else {
+        description.style.display = "none";
+    }
+}
+
+    </script>
+</body>
+</html>
